@@ -1,0 +1,48 @@
+### GET / 
+GET http://localHost:5000
+
+### Register a user (POST /auth/register)
+POST http://localHost:5000/auth/register
+Content-Type: application/json
+
+//data to send with request
+{
+    "username": "gilgamesh@gmail.com",
+    "password": "123123123"
+}
+
+### Login a user (POST /auth/register)
+POST http://localHost:5000/auth/login
+Content-Type: application/json
+
+//data to send with request
+{
+    "username": "gilgamesh@gmail.com",
+    "password": "123123123"
+}
+
+### Fetch all todos (GET /todos) 'protected: need to be a signed in user for this to work'
+GET http://localHost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODIxOTEwLCJleHAiOjE3NjU5MDgzMTB9.2IrKldwAdDDcn_-6mCDk_ulJsjPwjC2fpWqwWvMPiW8
+
+### Creates a new todo (POST /todos) 'protected: need to be a signed in user for this to work'
+POST http://localHost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODIxOTEwLCJleHAiOjE3NjU5MDgzMTB9.2IrKldwAdDDcn_-6mCDk_ulJsjPwjC2fpWqwWvMPiW8
+Content-Type: application/json
+
+{
+    "task": "Finish coding the projects"
+}
+
+### Update a todo (PUT /todos/:id) 'protected'
+PUT http://localHost:5000/todos/2   
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODIxOTEwLCJleHAiOjE3NjU5MDgzMTB9.2IrKldwAdDDcn_-6mCDk_ulJsjPwjC2fpWqwWvMPiW8
+
+{
+    "completed": 1
+}
+
+### Delete a todo (DELETE /todos/:id) 'protected'
+DELETE http://localHost:5000/todos/2   
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY1ODIxOTEwLCJleHAiOjE3NjU5MDgzMTB9.2IrKldwAdDDcn_-6mCDk_ulJsjPwjC2fpWqwWvMPiW8
