@@ -47,7 +47,7 @@ git clone https://github.com/Kent-Wal/Todo-App.git
 3. Start the Docker containers
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 4. Open your browser and go to: [http://localhost:5000](http://localhost:5000)
 
