@@ -5,7 +5,7 @@ FROM node:22-alpine
 WORKDIR /app
 
 # Copy the package.json and the package-lock.json files to the container
-COPY package*.json .
+COPY package*.json ./
 
 # Install the depenedencies
 RUN npm install
@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the application files
 # The first period is the current local directory and the second is the location in the docker environment (/app)
 COPY . .
+
+# Generate Prisma client
+RUN npx prisma generate
 
 # Expose the port that the app runs on
 EXPOSE 5000

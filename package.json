@@ -1,11 +1,11 @@
 {
-  "name": "chapter_4",
+  "name": "todo-app",
   "version": "1.0.0",
   "description": "A dockerized full stack todo application that uses a NodeJS backend, a PostgreSQL database, a Primsa ORM, and JWT authentication",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon --watch src --ext js,json --exec \"node --env-file=.env --experimental-strip-types --experimental-sqlite ./src/server.js\"",
+    "dev": "nodemon --watch src --ext js,json --exec \"node --env-file=.env ./src/server.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,9 +18,11 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.16.3",
-    "prisma": "^7.1.0"
+    "prisma": "^7.1.0",
+    "dotenv": "^16.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "prisma": "^7.1.0"
   }
 }
