@@ -39,17 +39,25 @@ It provides user authentication using **JWT**, database access via **Prisma**, a
 ---
 
 ## Running the Program
-1. First clone this repo by entering the command
+1. First clone this repo
 ```bash
 git clone https://github.com/Kent-Wal/Todo-App.git
 ```
 2. Enter the project directory
-3. Start the Docker containers
+```bash
+cd Todo-App
+```
+3. Change the name of the .env.example file to .env
+```bash
+mv .env.example .env
+```
+4. Start the Docker containers
 
 ```bash
 docker compose up --build
 ```
-4. Open your browser and go to: [http://localhost:5000](http://localhost:5000)
+5. Open your browser and go to: [http://localhost:5000](http://localhost:5000)
+6. Enjoy the app!
 
 ---
 
